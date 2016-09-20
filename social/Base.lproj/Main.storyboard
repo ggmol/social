@@ -68,6 +68,9 @@
                                     <constraint firstAttribute="height" constant="125" id="NyA-l8-jvS"/>
                                 </constraints>
                                 <state key="normal" image="fb_icon_325x325"/>
+                                <connections>
+                                    <action selector="facebookbtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0OS-AD-5rk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
