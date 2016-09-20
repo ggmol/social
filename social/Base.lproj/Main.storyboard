@@ -19,10 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXP-Mu-UhL">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXP-Mu-UhL" customClass="FancyView" customModule="social" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.0" green="0.73725490196078436" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="vfu-kV-wNI"/>
+                                    <constraint firstAttribute="height" constant="148" id="vfu-kV-wNI"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Voa-9W-hQP">
@@ -47,22 +47,22 @@
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O5U-bK-1yn">
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9xS-TN-oZC">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9xS-TN-oZC" customClass="FancyField" customModule="social" customModuleProvider="target">
                                         <color key="textColor" red="0.0" green="0.51372549019607838" blue="0.5607843137254902" alpha="0.87" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yV-I6-aGI">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yV-I6-aGI" customClass="FancyField" customModule="social" customModuleProvider="target">
                                         <color key="textColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="0.87" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-Xc-KVx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-Xc-KVx" customClass="FancyBtn" customModule="social" customModuleProvider="target">
                                         <state key="normal" title="Sign In"/>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBy-Sg-qRp">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBy-Sg-qRp" customClass="RoundBtn" customModule="social" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="4QE-Vg-slr"/>
                                     <constraint firstAttribute="height" constant="125" id="NyA-l8-jvS"/>
@@ -81,15 +81,14 @@
                             <constraint firstAttribute="leadingMargin" secondItem="nK0-4D-MVH" secondAttribute="leading" id="TL1-sG-KZ2"/>
                             <constraint firstItem="DXP-Mu-UhL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UNJ-nd-0VG"/>
                             <constraint firstItem="Voa-9W-hQP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VdG-SV-eBg"/>
-                            <constraint firstItem="DXP-Mu-UhL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wml-BP-L9d"/>
                             <constraint firstItem="xBy-Sg-qRp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yx3-Fc-fvJ"/>
                             <constraint firstItem="O5U-bK-1yn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="a3E-6g-Vuh"/>
                             <constraint firstItem="nK0-4D-MVH" firstAttribute="top" secondItem="DXP-Mu-UhL" secondAttribute="bottom" constant="17" id="dr7-RM-4HB"/>
                             <constraint firstItem="xBy-Sg-qRp" firstAttribute="top" secondItem="nK0-4D-MVH" secondAttribute="bottom" constant="52.666666666666657" id="jvr-f9-NBi"/>
                             <constraint firstAttribute="trailing" secondItem="Voa-9W-hQP" secondAttribute="trailing" id="l6R-Ht-PBO"/>
-                            <constraint firstItem="DXP-Mu-UhL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mmy-ZP-QuI"/>
                             <constraint firstAttribute="trailing" secondItem="DXP-Mu-UhL" secondAttribute="trailing" id="rd9-fw-PKs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nK0-4D-MVH" secondAttribute="trailing" id="rp6-X0-uJL"/>
+                            <constraint firstItem="DXP-Mu-UhL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xP7-WR-jxG"/>
                         </constraints>
                     </view>
                 </viewController>
