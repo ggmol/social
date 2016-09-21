@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
@@ -17,15 +18,19 @@ class SignInVC: UIViewController {
     
     @IBOutlet weak var passwordTextField: FancyField!
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.stringForKey(KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
     @IBAction func facebookbtnTapped(_ sender: UIButton) {
         
@@ -52,6 +57,9 @@ class SignInVC: UIViewController {
                 print("MU: Unable to authenticate with firebase - \(error)")
             } else {
                 print("MU: Successfully authenticated with firebase")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
             
         })
@@ -62,10 +70,16 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: {(user, error) in
                 if error == nil {
                     print("MU: User has signed in")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: {(user, error) in
                         if error == nil {
                             print("MU: new account with email and password created")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         } else {
                             print("Mu: error occurs in email and password signin")
                         }
@@ -73,6 +87,12 @@ class SignInVC: UIViewController {
                 }
             })
         }
+    }
+    
+    func completeSignIn(id: String){
+        let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
+        print("MU: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 
 }

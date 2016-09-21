@@ -16,6 +16,7 @@
 		8E81C21D1D91B41400C3266F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E81C21A1D91B41400C3266F /* FBSDKLoginKit.framework */; };
 		8E81C21E1D91B41400C3266F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E81C21B1D91B41400C3266F /* FBSDKShareKit.framework */; };
 		8E81C2201D91CBDD00C3266F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E81C21F1D91CBDD00C3266F /* Bolts.framework */; };
+		8E81C2231D92150C00C3266F /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81C2221D92150C00C3266F /* FeedVC.swift */; };
 		8EC3829D1D90998100BE7DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3829C1D90998100BE7DB8 /* AppDelegate.swift */; };
 		8EC3829F1D90998100BE7DB8 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3829E1D90998100BE7DB8 /* SignInVC.swift */; };
 		8EC382A21D90998100BE7DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC382A01D90998100BE7DB8 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		8E81C21B1D91B41400C3266F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		8E81C21F1D91CBDD00C3266F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8E81C2211D91CFA700C3266F /* social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = social.entitlements; sourceTree = "<group>"; };
+		8E81C2221D92150C00C3266F /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		8EC382991D90998100BE7DB8 /* social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = social.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC3829C1D90998100BE7DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EC3829E1D90998100BE7DB8 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC3829E1D90998100BE7DB8 /* SignInVC.swift */,
+				8E81C2221D92150C00C3266F /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 					8EC382981D90998100BE7DB8 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 78VVE4HZJC;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -282,6 +286,7 @@
 				8EC3829F1D90998100BE7DB8 /* SignInVC.swift in Sources */,
 				8E81C2141D90FA0200C3266F /* RoundBtn.swift in Sources */,
 				8EC3829D1D90998100BE7DB8 /* AppDelegate.swift in Sources */,
+				8E81C2231D92150C00C3266F /* FeedVC.swift in Sources */,
 				8E81C20D1D90EEF200C3266F /* FancyView.swift in Sources */,
 				8E81C2121D90F04400C3266F /* Constants.swift in Sources */,
 				8E81C2181D919B7300C3266F /* FancyBtn.swift in Sources */,
